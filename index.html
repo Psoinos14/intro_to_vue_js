@@ -25,6 +25,12 @@
     <p>
       {{ array }}
     </p>
+    <p>
+      <button v-on:click="toggleInfo()"> Toggle the Info
+      </button>
+    </p>
+    <p v-if="showInfo">Here is some more info
+    </p>
   </div>
   <script src="index.js"></script>
 </body>
