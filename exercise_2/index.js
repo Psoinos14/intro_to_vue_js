@@ -10,7 +10,8 @@ var app = new Vue({
   methods: {
     calculator: function() {
       console.log('i am in the calculator function');
-      console.log("firstNumber");
+      // console.log("firstNumber");
+      console.log(this.firstNumber);
         this.sum = parseInt(this.firstNumber) + parseInt(this.secondNumber) + parseInt(this.thirdNumber);
 
     }
