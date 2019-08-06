@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
-import Sample from './views/Sample.vue'
-import ProductsNew from './views/ProductsNew.vue'
-import ProductsShow from './views/ProductsShow.vue'
-import ProductsEdit from './views/ProductsEdit.vue'
 import Signup from "./views/Signup.vue";
 import Login from "./views/Login.vue";
 import Logout from "./views/Logout.vue";
+import PostsIndex from "./views/PostsIndex.vue";
+import PostsNew from "./views/PostsNew.vue";
+import PostsEdit from "./views/PostsEdit.vue";
 
 Vue.use(Router)
 
@@ -19,11 +18,6 @@ export default new Router({
       path: '/',
       name: 'home',
       component: Home
-    },
-    {
-      path: '/products/new',
-      name: 'products-new',
-      component: ProductsNew
     },
     {
       path: "/signup",
@@ -41,9 +35,19 @@ export default new Router({
       component: Logout
     },
     {
-      path: '/products/:id/edit',
-      name: 'products-edit',
-      component: ProductsEdit
+      path: "/posts",
+      name: "posts-index",
+      component: PostsIndex
+    },
+    {
+      path: "/posts/new",
+      name: "posts-new",
+      component: PostsNew
+    },
+    {
+      path: "/posts/edit",
+      name: "posts-edit",
+      component: PostsEdit
     },
     {
       path: '/about',
@@ -52,17 +56,6 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
-    },
-    {
-      path: '/products/:id',
-      name: 'products-show',
-      component: ProductsShow
-    },
-    {
-      path: '/sample',
-      name: 'sample',
-      component: Sample
     }
-    
   ]
-});
+})

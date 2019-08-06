@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <h1>{{ message }}</h1>
-
     <!-- <p>name: <input type="text" v-model="newProductName"></p>
     <p>price: <input type="text" v-model="newProductPrice"></p>
     <p>description: <input type="text" v-model="newProductDescription"></p>
@@ -43,7 +42,7 @@ import axios from "axios";
 export default {
   data: function() {
     return {
-      message: "change.js!",
+      message: "Home page",
       products: [],
     };
   },

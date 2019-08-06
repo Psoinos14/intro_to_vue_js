@@ -3,17 +3,17 @@
     <div id="nav">
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link> |
-      <router-link to="/products/new"> Make a new product</router-link> |
-      <router-link to="/sample">Sample</router-link> |
       <router-link to="/signup">Signup</router-link> |
       <router-link to="/login">Login</router-link> |
       <router-link to="/logout">Logout</router-link> |
+      <router-link to="/posts">All posts</router-link> |
+      <router-link to="/posts/new">New photo</router-link> |
     </div>
     <router-view/>
   </div>
 </template>
 
-<!-- <style>
+<style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -34,4 +34,3 @@
   color: #42b983;
 }
 </style>
- -->
