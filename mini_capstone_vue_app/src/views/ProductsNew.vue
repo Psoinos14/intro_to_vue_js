@@ -1,6 +1,9 @@
 <template>
   <div class="products-new">
     <h1>{{ message }}</h1>
+    <div v-for="error in errors">
+      {{error}}
+    </div>
     <form v-on:submit.prevent="makeProduct()">
     <p>name: <input type="text" v-model="newProductName"></p>
     <p>price: <input type="text" v-model="newProductPrice"></p>
@@ -27,9 +30,8 @@ export default {
       newProductPrice: "",
       newProductDescription: "",
       newProductImageUrl: "",
-      newSupplierId: ""
-
-
+      newSupplierId: "",
+      errors: []
     };
   },
   created: function() {},
@@ -49,7 +51,12 @@ export default {
         console.log('in the callback for create');
         console.log(response.data);
         this.$router.push('/');
-      });
+      })
+      .catch(error => {
+        console.log('in the .catch')
+        console.log(error.response);
+        this.errors = error.response.data.errors;
+      })
     }
   }
 };
