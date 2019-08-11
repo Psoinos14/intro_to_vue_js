@@ -11,8 +11,6 @@
       <input type="text" v-model="newDayAndTimeTime" />
       Gym:
       <input type="text" v-model="newDayAndTimeGymID" />
-      User:
-      <input type="text" v-model="newDayAndTimeUserID" />
       <input type="submit" value="Create" />
     </form>
   </div>
@@ -27,7 +25,6 @@ export default {
       newDayAndTimeDay: "",
       newDayAndTimeTime: "",
       newDayAndTimeGymID: "",
-      newDayAndTimeUserID: "",
       errors: []
     };
   },
@@ -43,7 +40,6 @@ export default {
         Day: this.newDayAndTimeDay,
         Time: this.newDayAndTimeTime,
         Gym: this.newDayAndTimeGymID,
-        User: this.newDayAndTimeUserID
       };
       axios
         .post("/api/day_and_times", params)

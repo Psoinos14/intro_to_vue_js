@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import UsersNew from "./views/UsersNew.vue"
 import DayAndTimesNew from "./views/DayAndTimesNew.vue";
+import Login from "./views/Login.vue";
+import Logout from "./views/Logout.vue";
 
 Vue.use(Router)
 
@@ -27,6 +29,16 @@ export default new Router({
       path: '/users/new',
       name: 'users-new',
       component: UsersNew
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: Login
+    },
+    {
+      path: "/logout",
+      name: "logout",
+      component: Logout
     },
     {
       path: '/day_and_times/new',
