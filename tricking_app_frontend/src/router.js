@@ -5,6 +5,7 @@ import UsersNew from "./views/UsersNew.vue"
 import DayAndTimesNew from "./views/DayAndTimesNew.vue";
 import Login from "./views/Login.vue";
 import Logout from "./views/Logout.vue";
+import GymsIndex from "./views/GymsIndex.vue";
 
 Vue.use(Router)
 
@@ -39,6 +40,11 @@ export default new Router({
       path: "/logout",
       name: "logout",
       component: Logout
+    },
+    {
+      path: "/gyms",
+      name: "gyms-index",
+      component: GymsIndex
     },
     {
       path: '/day_and_times/new',

@@ -6,7 +6,8 @@
       <router-link to="/users/new">New User</router-link> |
       <router-link to="/day_and_times/new">New Check-in</router-link> |
       <router-link to="/login">Login </router-link> |
-      <router-link to="/logout">Logout</router-link>
+      <router-link to="/logout">Logout</router-link> |
+      <router-link to="/gyms">All Gyms</router-link>
     </div>
     <router-view/>
   </div>
